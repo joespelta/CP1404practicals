@@ -1,8 +1,9 @@
 # 1)
 
+NUMBER_OF_NUMBERS = 5
 numbers = []
 
-for i in range(5):
+for i in range(NUMBER_OF_NUMBERS):
     number = int(input("Number: "))
     numbers.append(number)
 
