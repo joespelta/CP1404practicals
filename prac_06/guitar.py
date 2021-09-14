@@ -5,10 +5,10 @@ class Guitar:
     """Represents a guitar object."""
 
     def __init__(self, name="", year=0, cost=0):
-        self.name = name
+        self.name = name.title()
         self.year = year
         self.cost = cost
-        self.age = 0
+        self.age = self.get_age()
 
     def __str__(self):
         return str(f"{self.name} ({self.year}): ${self.cost}")
