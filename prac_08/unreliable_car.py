@@ -1,4 +1,4 @@
-from prac_08.car import Car
+from car import Car
 import random
 
 
@@ -17,4 +17,5 @@ class UnreliableCar(Car):
         else:
             distance_driven = 0
             return distance_driven
-        
+
+

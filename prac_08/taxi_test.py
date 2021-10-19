@@ -1,4 +1,4 @@
-from prac_08.taxi import Taxi
+from taxi import Taxi
 
 taxi_1 = Taxi("Prius 1", 100)
 

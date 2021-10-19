@@ -1,4 +1,4 @@
-from prac_08.unreliable_car import UnreliableCar
+from unreliable_car import UnreliableCar
 
 car_01 = UnreliableCar("Camry", 200, 76)
 car_02 = UnreliableCar("Ford", 200, 21)
