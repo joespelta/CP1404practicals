@@ -38,7 +38,6 @@ def main():
         # Option 2: move file to new place, with new name
         shutil.move(filename, 'temp/' + new_name)
 
-
 def get_fixed_filename(filename):
     """Return a 'fixed' version of filename."""
     new_name = filename.replace(" ", "_").replace(".TXT", ".txt")
