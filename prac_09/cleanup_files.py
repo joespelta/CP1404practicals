@@ -7,20 +7,18 @@ import os
 
 
 def main():
-    """Demo os module functions."""
+    """Cleanup file names."""
     print("Starting directory is: {}".format(os.getcwd()))
-    os.chdir('Lyrics/Christmas')
+    os.chdir('Lyrics')
     print("Files in {}:\n{}\n".format(os.getcwd(), os.listdir('.')))
-    try:
-        os.mkdir('temp')
-    except FileExistsError:
-        pass
-    for filename in os.listdir('.'):
-        if os.path.isdir(filename):
-            continue
-        new_name = get_fixed_filename(filename)
-        print("Renaming {} to {}".format(filename, new_name))
-
+    for directory_name, sub_directories, file_names in os.walk('.'):
+        print(f"Directory: {directory_name}")
+        print(f"Subdirectories: {sub_directories}")
+        print(f"Files: {file_names}")
+        print(f"Current directory: {os.getcwd()}")
+        for file_name in file_names:
+            new_name = get_fixed_filename(file_name)
+            print(f"Renaming {file_name} to {new_name}")
 
 def get_fixed_filename(filename):
     """Return a 'fixed' version of filename."""
